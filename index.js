@@ -15,9 +15,9 @@ function nestedTarget() {
 // - Define a function `increaseRankBy(n)` that increases the ranks in all of the `.ranked-list`s by `n`. (You might need to make use of [`parseInt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 
 function increaseRankBy(n) {
-  var lis = document.querySelectorAll("ul.ranked-list");
+  var lis = document.querySelectorAll("ul.ranked-list li");
   for (let i=0; i < lis.length; i++) {
-    
+    lis[i].innerHTML = parseInt(lis[i]) + n;
   }
 }
 
